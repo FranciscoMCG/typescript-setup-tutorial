@@ -5,7 +5,7 @@ https://medium.com/react-graphql-academy/franciscogomes-a-typescript-tale-setup-
 
 ---
 
-#### Installing the _TypeScript_ compiler globally
+#### Installing the TypeScript compiler globally
 
 ```javascript
 npm install -g typescript
@@ -23,7 +23,7 @@ mkdir my-first-typescript-project && cd my-first-typescript-project
 
 #### Create a file and name it _index.ts_
 
-**\*.ts** is the official extension for _TypeScript_ files and should be always used. It actually stands for _TypeScript_.
+**\*.ts** is the official extension for TypeScript files and should be always used. It actually stands for TypeScript.
 
 ```javascript
 touch index.ts
@@ -31,13 +31,13 @@ touch index.ts
 
 #### Open your IDE of choice
 
-First, you’ll want to make sure it supports _TypeScript_. You might need to install additional plugin(s). Type the following line in your **index.ts**:
+First, you’ll want to make sure it supports TypeScript. You might need to install additional plugin(s). Type the following line in your **index.ts**:
 
 ```javascript
 console.log("Hello World");
 ```
 
-At this point, your code hasn’t been compiled to _JavaScript_ yet, therefore your browser won’t be able to read it.
+At this point, your code hasn’t been compiled to JavaScript yet, therefore your browser won’t be able to read it.
 
 #### In your terminal, type
 
@@ -46,7 +46,7 @@ tsc index.ts
 ```
 
 Note: If you get an error when running the **tsc** command, it means something went wrong with your installation.
-Now, look at your file structure and you’ll find a new file **index.js**. This is the compiled file from your _TypeScript_. At the moment is identical since both syntaxes for this code are the same.
+Now, look at your file structure and you’ll find a new file **index.js**. This is the compiled file from your TypeScript. At the moment is identical since both syntaxes for this code are the same.
 
 #### Create your _tsconfig.json_
 
@@ -54,7 +54,7 @@ Now, look at your file structure and you’ll find a new file **index.js**. This
 tsc --init
 ```
 
-#### Replace your _tsconfig_ content with the following
+#### Replace your _tsconfig.json_ content with the following
 
 ```javascript
 {
@@ -67,7 +67,7 @@ tsc --init
 
 ---
 
-## Installing _ESLint_
+## Installing ESLint
 
 #### Create your _package.json_
 
