@@ -5,7 +5,7 @@ https://medium.com/react-graphql-academy/franciscogomes-a-typescript-tale-setup-
 
 ---
 
-#### Installing the TypeScript compiler globally
+#### Installing the _TypeScript_ compiler globally
 
 ```javascript
 npm install -g typescript
@@ -21,9 +21,9 @@ You can either use the macOS Terminal, the Windows Command Line or your IDE, but
 mkdir my-first-typescript-project && cd my-first-typescript-project
 ```
 
-#### Create a file and name it index.ts
+#### Create a file and name it _index.ts_
 
-\*.ts is the official extension for TypeScript files and should be always used. It actually stands for TypeScript.
+**\*.ts** is the official extension for _TypeScript_ files and should be always used. It actually stands for _TypeScript_.
 
 ```javascript
 touch index.ts
@@ -31,13 +31,13 @@ touch index.ts
 
 #### Open your IDE of choice
 
-First, you’ll want to make sure it supports TypeScript. You might need to install additional plugin(s). Type the following line in your index.ts:
+First, you’ll want to make sure it supports _TypeScript_. You might need to install additional plugin(s). Type the following line in your **index.ts**:
 
 ```javascript
 console.log("Hello World");
 ```
 
-At this point, your code hasn’t been compiled to JavaScript yet, therefore your browser won’t be able to read it.
+At this point, your code hasn’t been compiled to _JavaScript_ yet, therefore your browser won’t be able to read it.
 
 #### In your terminal, type
 
@@ -45,16 +45,16 @@ At this point, your code hasn’t been compiled to JavaScript yet, therefore you
 tsc index.ts
 ```
 
-Note: If you get an error when running the “tsc” command, it means something went wrong with your installation.
-Now, look at your file structure and you’ll find a new file index.js. This is the compiled file from your TypeScript. At the moment is identical since both syntaxes for this code are the same.
+Note: If you get an error when running the **tsc** command, it means something went wrong with your installation.
+Now, look at your file structure and you’ll find a new file **index.js**. This is the compiled file from your _TypeScript_. At the moment is identical since both syntaxes for this code are the same.
 
-#### Create your tsconfig.json
+#### Create your _tsconfig.json_
 
 ```javascript
 tsc --init
 ```
 
-#### Replace your tsconfig content with the following
+#### Replace your _tsconfig_ content with the following
 
 ```javascript
 {
@@ -67,9 +67,9 @@ tsc --init
 
 ---
 
-## Installing Eslint
+## Installing _ESLint_
 
-#### Create your package.json
+#### Create your _package.json_
 
 ```javascript
 npm init
@@ -81,21 +81,31 @@ npm init
 npm install eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
 ```
 
-#### Create your .eslintrc.js at the root level
+#### Create your _.eslintrc.js_ at the root level
 
-You can go for a json file instead
+You can go for a _json_ file instead
 
 ```javascript
 touch.eslintrc.js;
 ```
 
-#### Paste the following code in your eslintrc.js
+#### Paste the following code in your _.eslintrc.js_
 
 ```javascript
-npm install eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
+module.exports = {
+  parser: "@typescript-eslint/parser",
+  extends: ["plugin:@typescript-eslint/recommended"],
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: "module",
+  },
+  rules: {
+    //Our ESlint rules.
+  },
+};
 ```
 
-#### Paste the following code in your index.ts
+#### Paste the following code in your _index.ts_
 
 ```javascript
 const name = "Francisco";
@@ -111,8 +121,14 @@ const character = (name: string, age: number): void => {
 tsc index.ts
 ```
 
-Open your corresponding javascript file, index.js and see the compiled version of your code
+Open your corresponding javascript file, **index.js** and see the compiled version of your code
 
 ---
+
+Resources:
+[TypeScript](https://www.typescriptlang.org/)
+[ESLint](https://eslint.org/)
+[@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
+[@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser)
 
 Created by [FranciscoMCG](https://github.com/franciscomcg)
